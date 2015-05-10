@@ -633,7 +633,10 @@ Please make sure your boards conform to these design rules.</description>
 <element name="R6" library="SparkFun-Resistors" package="AXIAL-0.4" value="" x="34.29" y="39.37" rot="R180"/>
 <element name="R7" library="SparkFun-Resistors" package="AXIAL-0.4" value="" x="34.29" y="59.69" rot="R180"/>
 <element name="R8" library="SparkFun-Resistors" package="AXIAL-0.4" value="" x="34.29" y="64.77" rot="R180"/>
-<element name="U1" library="Teensy_3_Series_Board_v1.0" package="TEENSY_3.1_BASIC" value="TEENSY_3.1_BASIC" x="11.43" y="19.05" rot="R180"/>
+<element name="U1" library="Teensy_3_Series_Board_v1.0" package="TEENSY_3.1_BASIC" value="TEENSY_3.1_BASIC" x="11.43" y="19.05" smashed="yes" rot="R180">
+<attribute name="NAME" x="5.08" y="40.64" size="1.27" layer="25" font="vector" rot="R180"/>
+<attribute name="VALUE" x="20.32" y="39.37" size="1.27" layer="27" font="vector" rot="R180"/>
+</element>
 <element name="U2" library="Nanotronics" package="1X10" value="XBEE_ADAPTER_KIT" x="3.81" y="67.31" rot="R270"/>
 </elements>
 <signals>

@@ -143,9 +143,9 @@
 <wire x1="0" y1="73.65" x2="0" y2="0" width="0" layer="20"/>
 <text x="7.62" y="57.15" size="1.778" layer="21">Dylan Fashbaugh</text>
 <text x="7.62" y="54.61" size="1.778" layer="21">James DeVito</text>
-<text x="7.62" y="52.07" size="1.778" layer="21">Dave Scheinkopf</text>
 <text x="10.16" y="67.31" size="1.778" layer="21">Taylor Swift</text>
 <text x="10.16" y="64.77" size="1.778" layer="21">RX Board</text>
+<text x="7.62" y="52.07" size="1.778" layer="21">Dave Sheinkopf</text>
 </plain>
 <libraries>
 <library name="SparkFun-Capacitors">
