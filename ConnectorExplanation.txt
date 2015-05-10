@@ -1,0 +1,8 @@
+Connector 1 Setup = + - S S
+	            + - S +
+
+Connector 2 Setup = + - S S 
+		    + - S +
+
+Connector 3 Setup = + - S 
+		    + - S 
