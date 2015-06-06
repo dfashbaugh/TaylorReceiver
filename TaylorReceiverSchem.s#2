@@ -5368,11 +5368,12 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="D3" library="SparkFun-LED" deviceset="LED" device="5MM"/>
 <part name="SUPPLY12" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND12" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="GND14" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="35.56" y="91.44" size="3.81" layer="104">XBee/Teensy Receiver/Brain</text>
+<text x="15.24" y="81.28" size="3.81" layer="104">XBee/Teensy Receiver/Brain</text>
 <text x="-139.7" y="25.4" size="3.81" layer="104">Top Connector</text>
 <text x="-142.24" y="-55.88" size="3.81" layer="104">Bottom Connector</text>
 <text x="-137.16" y="-10.16" size="3.81" layer="104">Vest Connector</text>
@@ -5380,6 +5381,8 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <text x="58.42" y="154.94" size="3.81" layer="104">Battery Input</text>
 <text x="-160.02" y="137.16" size="5.08" layer="104">XBEE and Clean Power Circuit</text>
 <text x="-20.32" y="139.7" size="3.81" layer="104">LED Indicators</text>
+<text x="17.78" y="-22.86" size="2.54" layer="104">DIP Switch Circuit</text>
+<text x="17.78" y="-25.4" size="1.778" layer="104">Must use internal pullups in Teensy</text>
 </plain>
 <instances>
 <instance part="U1" gate="U1" x="55.88" y="38.1"/>
@@ -5406,7 +5409,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <instance part="GND8" gate="1" x="-48.26" y="-48.26"/>
 <instance part="GND9" gate="1" x="-40.64" y="-60.96"/>
 <instance part="C1" gate="G$1" x="88.9" y="60.96"/>
-<instance part="SW1" gate="A" x="27.94" y="-17.78"/>
+<instance part="SW1" gate="A" x="38.1" y="-38.1"/>
 <instance part="U3" gate="G$1" x="-71.12" y="101.6"/>
 <instance part="RN1" gate="A" x="-68.58" y="30.48"/>
 <instance part="RN1" gate="B" x="-68.58" y="22.86"/>
@@ -5433,6 +5436,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <instance part="D3" gate="G$1" x="0" y="106.68" rot="R90"/>
 <instance part="SUPPLY12" gate="G$1" x="-27.94" y="129.54"/>
 <instance part="GND12" gate="1" x="20.32" y="96.52"/>
+<instance part="GND14" gate="1" x="17.78" y="-55.88"/>
 </instances>
 <busses>
 </busses>
@@ -5628,6 +5632,24 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <wire x1="5.08" y1="114.3" x2="20.32" y2="114.3" width="0.1524" layer="91"/>
 <junction x="20.32" y="114.3"/>
 <pinref part="GND12" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="SW1" gate="A" pin="5"/>
+<wire x1="30.48" y1="-35.56" x2="17.78" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="-35.56" x2="17.78" y2="-38.1" width="0.1524" layer="91"/>
+<pinref part="SW1" gate="A" pin="6"/>
+<wire x1="17.78" y1="-38.1" x2="17.78" y2="-40.64" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="-40.64" x2="17.78" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="-43.18" x2="17.78" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="-38.1" x2="17.78" y2="-38.1" width="0.1524" layer="91"/>
+<junction x="17.78" y="-38.1"/>
+<pinref part="SW1" gate="A" pin="7"/>
+<wire x1="30.48" y1="-40.64" x2="17.78" y2="-40.64" width="0.1524" layer="91"/>
+<junction x="17.78" y="-40.64"/>
+<pinref part="SW1" gate="A" pin="8"/>
+<wire x1="30.48" y1="-43.18" x2="17.78" y2="-43.18" width="0.1524" layer="91"/>
+<junction x="17.78" y="-43.18"/>
+<pinref part="GND14" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="XBEERECV" class="0">
@@ -5863,6 +5885,54 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="-17.78" y1="114.3" x2="-30.48" y2="114.3" width="0.1524" layer="91"/>
 <label x="-30.48" y="114.3" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DIP1" class="0">
+<segment>
+<pinref part="U1" gate="U1" pin="9/RX2/PWM"/>
+<wire x1="33.02" y1="43.18" x2="17.78" y2="43.18" width="0.1524" layer="91"/>
+<label x="17.78" y="43.18" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SW1" gate="A" pin="1"/>
+<wire x1="45.72" y1="-43.18" x2="60.96" y2="-43.18" width="0.1524" layer="91"/>
+<label x="55.88" y="-43.18" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DIP2" class="0">
+<segment>
+<pinref part="U1" gate="U1" pin="10/TX2/PWM"/>
+<wire x1="33.02" y1="40.64" x2="17.78" y2="40.64" width="0.1524" layer="91"/>
+<label x="17.78" y="40.64" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SW1" gate="A" pin="2"/>
+<wire x1="45.72" y1="-40.64" x2="60.96" y2="-40.64" width="0.1524" layer="91"/>
+<label x="55.88" y="-40.64" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DIP3" class="0">
+<segment>
+<pinref part="U1" gate="U1" pin="11/MOSI"/>
+<wire x1="33.02" y1="38.1" x2="17.78" y2="38.1" width="0.1524" layer="91"/>
+<label x="17.78" y="38.1" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SW1" gate="A" pin="3"/>
+<wire x1="45.72" y1="-38.1" x2="60.96" y2="-38.1" width="0.1524" layer="91"/>
+<label x="55.88" y="-38.1" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DIP4" class="0">
+<segment>
+<pinref part="U1" gate="U1" pin="12/MISO"/>
+<wire x1="33.02" y1="35.56" x2="17.78" y2="35.56" width="0.1524" layer="91"/>
+<label x="17.78" y="35.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SW1" gate="A" pin="4"/>
+<wire x1="45.72" y1="-35.56" x2="60.96" y2="-35.56" width="0.1524" layer="91"/>
+<label x="55.88" y="-35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

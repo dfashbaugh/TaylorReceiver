@@ -144,7 +144,13 @@
 <text x="29.21" y="62.23" size="1.778" layer="21">Power</text>
 <text x="39.37" y="62.23" size="1.778" layer="21">ASC</text>
 <text x="48.26" y="62.23" size="1.778" layer="21">RSSI</text>
-<text x="8.89" y="57.15" size="1.778" layer="21">XBEE</text>
+<text x="10.16" y="55.88" size="1.778" layer="21">XBEE</text>
+<text x="41.91" y="6.35" size="1.27" layer="21">RX Board</text>
+<text x="25.4" y="68.58" size="1.778" layer="22" rot="MR0">Dylan Fashbaugh</text>
+<text x="25.4" y="64.77" size="1.778" layer="22" rot="MR0">James DeVito</text>
+<text x="25.4" y="60.96" size="1.778" layer="22" rot="MR0">David Scheinkopf</text>
+<text x="24.13" y="57.15" size="1.778" layer="22" rot="MR0">Asher Levine</text>
+<text x="41.91" y="8.89" size="1.4224" layer="21">Taylor Swift</text>
 </plain>
 <libraries>
 <library name="SparkFun-Capacitors">
@@ -953,7 +959,7 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="N$1">
 <contactref element="U1" pad="15/A1"/>
 <contactref element="U1" pad="16/A2"/>
-<wire x1="3.81" y1="27.94" x2="3.81" y2="30.48" width="0" layer="19" extent="1-1"/>
+<wire x1="3.81" y1="27.94" x2="3.81" y2="30.48" width="0.4064" layer="1"/>
 </signal>
 <signal name="STRIP1">
 <contactref element="U1" pad="2"/>
